@@ -12,7 +12,7 @@ export function fahrenheitToCelius(fahrenheit: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    var result: number = 0;
+    let result: number = 0;
     if (first > 0) {
         result += first;
     }
@@ -38,7 +38,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return true;
+    return message.at(-1) == "?";
 }
 
 /**
