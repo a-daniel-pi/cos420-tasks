@@ -21,7 +21,15 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    return numbers.map((value: string): number => {
+        const result: number = parseInt(value);
+        if (result != result) {
+            // parseInt returns nan on invalid input
+            return 0;
+        } else {
+            return result;
+        }
+    });
 }
 
 /**
