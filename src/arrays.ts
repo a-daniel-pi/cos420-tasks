@@ -90,7 +90,18 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    return colors.reduce((all: boolean, color: string): boolean => {
+        if (color == "red") {
+            return all;
+        }
+        if (color == "green") {
+            return all;
+        }
+        if (color == "blue") {
+            return all;
+        }
+        return false;
+    }, true);
 }
 
 /**
